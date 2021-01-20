@@ -2,10 +2,15 @@
 	session_start();
 
 	// Define database
-	define('dbhost', 'localhost');
-	define('dbuser', 'root');
-	define('dbpass', '');
-	define('dbname', 'cinsys');
+	// define('dbhost', 'localhost');
+	// define('dbuser', 'root');
+	// define('dbpass', '');
+	// define('dbname', 'cinsys');
+//Remote DB
+	define('dbhost', 'remotemysql.com');
+	define('dbuser', 'HHh5S5qdnc');
+	define('dbpass', 'hoUUU48fLk');
+	define('dbname', 'HHh5S5qdnc');
 
 	// Connecting database
 	try {
