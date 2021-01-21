@@ -41,7 +41,7 @@
 				<br>
  <br>
  <!-- <h3 class="text-center text-success" id="message"><?php echo  $success; ?></h3> -->
-    <div class="container">
+    <div style="width:auto; overflow;" class="container">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">

@@ -43,6 +43,11 @@
 				  <div class="form-group">
 				    <label for="location">Location</label>
 				    <input type="text" class="form-control" id="location" placeholder="location" name="location" required>
+					<select class="form-control" id="locatio" name="location" required>
+					      <option value="PSM">PSM</option>
+					      <option value="FINANCE">FINANCE</option>
+						  <option value="TOURISM">TOURISM</option>
+					    </select>
 				  </div>
 				 </div>
 
