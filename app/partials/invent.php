@@ -49,6 +49,7 @@
 						  <option value="TOURISM">TOURISM</option>
 						  <option value="LANDS">LANDS</option>
 						  <option value="WATER">WATER</option>
+						  <option value="AGRICULTURE">AGRICULTURE</option>
 					    </select>
 				  </div>
 				 </div>
