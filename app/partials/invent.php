@@ -47,6 +47,8 @@
 					      <option value="PSM">PSM</option>
 					      <option value="FINANCE">FINANCE</option>
 						  <option value="TOURISM">TOURISM</option>
+						  <option value="LANDS">LANDS</option>
+						  <option value="WATER">WATER</option>
 					    </select>
 				  </div>
 				 </div>
