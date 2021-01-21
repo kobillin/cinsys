@@ -43,7 +43,7 @@
 				  <div class="form-group">
 				    <label for="location">Location</label>
 				    <!-- <input type="t ext"class="form-control" id="location" placeholder="location" name="location" required> -->
-					<select type="text" class="form-control" id="locatio" name="location" required>
+					<select type="text" class="form-control" id="location" name="location" required>
 					      <option value="PSM">PSM</option>
 					      <option value="FINANCE">FINANCE</option>
 						  <option value="TOURISM">TOURISM</option>
@@ -64,23 +64,23 @@
 
 			<div class="row">
 				<div class="col-md-4">
-			  <div class="form-group">
-			    <label for="assigned_to">Assigned To</label>
-			    <input type="assigned_to" class="form-control" id="assigned_to" placeholder="assigned to" name="assigned_to" required>
-			  </div>
+			  		<div class="form-group">
+			    	<label for="assigned_to">Assigned To</label>
+			    	<input type="assigned_to" class="form-control" id="assigned_to" placeholder="assigned to" name="assigned_to" required>
+			  		</div>
 			  </div>
 
 	
               <div class="col-4">
 			 		 <div class="form-group">
 					    <label for="status">Condition</label>
-					    <select class="form-control" id="status" name="status">
+					    <select type="text" class="form-control" id="status" name="status" required>
 					      <option value="Working">Working</option>
 					      <option value="Not Working">Not Working</option>
 					    </select>
 					  </div>
 			 	</div>
-			 	</div>
+			</div>
 			 <!-- <div class="col-md-4">
 			  <div class="form-group">
 			    <label for="description">Image</label>
