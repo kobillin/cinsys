@@ -74,7 +74,7 @@ if (isset($_GET['deleteb'])) {
 function showmyinvent(){
 	global $conn;
 	$user_id = $_SESSION['id'];
-	$query ="SELECT * FROM registrations_invent WHERE user_id = :user_id ORDER BY id ASC";
+	$query ="SELECT * FROM registrations_invent WHERE user_id = $user_id ORDER BY id ASC";
 	$run = mysqli_query($conn, $query);
 
 	while ($row = mysqli_fetch_assoc($run)) {
