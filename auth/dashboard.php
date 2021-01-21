@@ -10,7 +10,7 @@
 
 		$stmt = $connect->prepare('SELECT count(*) as register_invent FROM registrations_invent');
 		$stmt->execute();
-		$lands = $stmt->fetch(PDO::FETCH_ASSOC);
+		$invents = $stmt->fetch(PDO::FETCH_ASSOC);
 		$stmt = $connect->prepare('SELECT count(*) as total_invent FROM registrations_invent');
 		$stmt->execute();
 		$total_rent = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -66,8 +66,8 @@
 						<?php 
 							if($_SESSION['role'] == 'admin'){ 
 								echo '<div class="col-md-3">';
-								echo '<a href="../app/landlist.php"><div class="alert alert-warning" role="alert">';
-								echo '<b>Inventory: <span class="badge badge-pill badge-success">'.$lands['register_invent'].'</span></b>';
+								echo '<a href="../app/inventories.php"><div class="alert alert-warning" role="alert">';
+								echo '<b>Inventory: <span class="badge badge-pill badge-success">'.$invents['register_invent'].'</span></b>';
 								echo '</div></a>';
 								echo '</div>';
 							} 

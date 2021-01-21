@@ -5,7 +5,8 @@
 		header('Location: login.php');	
 ?>
 <?php 
-	$mysqli =new mysqli('localhost', 'root','', 'cinsys') or die(mysqli_error(mysqli));
+  // $mysqli =new mysqli('localhost', 'root','', 'cinsys') or die(mysqli_error(mysqli));
+  $mysqli =new mysqli('remotemysql.com', 'HHh5S5qdnc','hoUUU48fLk', 'HHh5S5qdnc') or die(mysqli_error(mysqli));
 	$result =$mysqli->query("SELECT * from users") or die($mysqli->error);
 
  ?>
