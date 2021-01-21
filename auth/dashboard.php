@@ -16,7 +16,7 @@
 		$total_rent = $stmt->fetch(PDO::FETCH_ASSOC);
 	}
 
-	$stmt = $connect->prepare('SELECT count(*) as total_invent FROM registrations_invent WHERE user_id = :user_id');
+	$stmt = $connect->prepare('SELECT count(*) as mytotal_invent FROM registrations_invent WHERE user_id = :user_id');
 	$stmt->execute(array(
 		':user_id' => $_SESSION['id']
 		));
@@ -75,49 +75,12 @@
 						<?php 
 							if($_SESSION['role'] == 'user'){ 
 								echo '<div class="col-md-3">';
-								echo '<a href="../app/list.php"><div class="alert alert-warning" role="alert">';
-								echo '<b>My Properties: <span class="badge badge-pill badge-success">'.(intval($total_auth_user_rent['total_auth_user_rent'])+intval($total_auth_user_rent_ap['total_auth_user_rent_ap'])).'</span></b>';
+								echo '<a href="../app/myinventories.php"><div class="alert alert-warning" role="alert">';
+								echo '<b>Inventory: <span class="badge badge-pill badge-success">'.$invents['register_invent'].'</span></b>';
 								echo '</div></a>';
 								echo '</div>';
 							} 
 						?>
-						<?php 
-							if($_SESSION['role'] == 'user'){ 
-								echo '<div class="col-md-3">';
-								echo '<a href="../app/landlist.php"><div class="alert alert-warning" role="alert">';
-								echo '<b>My Lands: <span class="badge badge-pill badge-success">'.$lands['register_land'].'</span></b>';
-								echo '</div></a>';
-								echo '</div>';
-							} 
-						?>
-						<?php 
-							if($_SESSION['role'] == 'user'){ 
-								echo '<div class="col-md-3">';
-								echo '<a href="../app/mybookings.php"><div class="alert alert-warning" role="alert">';
-								echo '<b>My Bookings: <span class="badge badge-pill badge-success">'.$bookings['bookings'].'</span></b>';
-								echo '</div></a>';
-								echo '</div>';
-							} 
-						?>
-						<?php 
-							if($_SESSION['role'] == 'user'){ 
-								echo '<div class="col-md-3">';
-								echo '<a href="../app/listothers.php"><div class="alert alert-warning" role="alert">';
-								echo '<b>Properties: <span class="badge badge-pill badge-success">'.(intval($apartothers['apartothers'])+intval($roomothers['roomothers'])).'</span></b>';
-								echo '</div></a>';
-								echo '</div>';
-							} 
-						?>	
-
-						<?php 
-							if($_SESSION['role'] == 'user'){ 
-								echo '<div class="col-md-3">';
-								echo '<a href="../app/landlistothers.php"><div class="alert alert-warning" role="alert">';
-								echo '<b>Lands: <span class="badge badge-pill badge-success">'.$landothers['landothers'].'</span></b>';
-								echo '</div></a>';
-								echo '</div>';
-							} 
-						?>	
 					</div>
 				</div>
 			<!-- </div> -->

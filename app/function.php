@@ -70,43 +70,44 @@ if (isset($_GET['deleteb'])) {
     }
 }
 
-//MY bookings
-
+//MY inventory
 function showmyinvent(){
 	global $conn;
-
-	$bookname = $_SESSION["fullname"];
-
-	$query ="SELECT * FROM bookings WHERE bookname ='$bookname' ORDER BY id ASC";
+	$user_id = $_SESSION['id'];
+	$query ="SELECT * FROM registrations_invent WHERE :user_id = user_id ORDER BY id ASC";
 	$run = mysqli_query($conn, $query);
 
 	while ($row = mysqli_fetch_assoc($run)) {
 		
 		// Get data from FROM
-		$id = $row['id'];
-			$apartment_name = $row['apartment_name'];
-			$plot_number = $row['plot_number'];
-			$floor = $row['floor'];
-			$rooms = $row['rooms'];
-			$ap_number_of_plats = $row['ap_number_of_plats'];
-			$bookname = $row['bookname'];
-			$deposit = $row['deposit'];
-			$datebooked = $row['datebooked'];
+		    $id = $row['id'];
+			$description = $row['description'];
+			$brand = $row['brand'];
+			$model = $row['model'];
+			$serial_no = $row['serial_no'];
+			$location = $row['location'];
+			$department = $row['department'];
+			$assigned_to = $row['assigned_to'];
+			$status = $row['status'];
+			$created_at = $row['created_at'];
 
 		echo "<tr>";
-		
-		echo "<td>{$apartment_name}</td>";
-		echo "<td>{$plot_number}</td>";
-		echo "<td>{$floor}</td>";
-		echo "<td>{$rooms}</td>";
-		echo "<td>{$ap_number_of_plats}</td>";
-		echo "<td>{$deposit}</td>";
-		echo "<td>{$datebooked}</td>";
+		echo "<td>{$id}</td>";
+		echo "<td>{$description}</td>";
+		echo "<td>{$brand}</td>";
+		echo "<td>{$model}</td>";
+		echo "<td>{$serial_no}</td>";
+		echo "<td>{$location}</td>";
+		echo "<td>{$department}</td>";
+		echo "<td>{$assigned_to}</td>";
+		echo "<td>{$status}</td>";
+		echo "<td>{$created_at}</td>";
 		// echo "<td> <a href='bookings.php?deleteb={$id}'class='btn btn-danger' >Delete</a> </td>";
 		echo "</tr>";
 	}
 }
 
+//All Inventory
 function showinvent(){
 	global $conn;
 
