@@ -3,64 +3,41 @@
 	if(empty($_SESSION['username']))
 		header('Location: login.php');
 
-	if(isset($_POST['register_invent'])) {
+		if(isset($_POST['register'])) {
 			$errMsg = '';
+	
 			// Get data from FROM
-			$description = $_POST['description'];
-			$brand = $_POST['brand'];
-			$model = $_POST['model'];
-			$serial_no = $_POST['serial_no'];
-			$location = $_POST['location'];
-			$department = $_POST['department'];
-			$assigned_to = $_POST['assigned_to'];
-			$status = $_POST['status'];
-			//$open_for_sharing = $_POST['open_for_sharing'];
-			$user_id = $_SESSION['id'];
-			//$image = $_POST['image']?$_POST['image']:NULL;
-			//$other = $_POST['other'];			
-			//upload an images
-			// $target_file = "";
-			// if (isset($_FILES["image"]["name"])) {
-			// 	$target_file = "uploads/".basename($_FILES["image"]["name"]);
-			// 	$uploadOk = 1;
-			// 	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-			// 	// Check if image file is a actual image or fake image
-			//     $check = getimagesize($_FILES["image"]["tmp_name"]);			
-			//     if($check !== false) {
-			//     	move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/" . $_FILES["image"]["name"]);
-			//         $uploadOk = 1;
-			//     } else {
-			//         echo "File is not an image.";
-			//         $uploadOk = 0;
-			//     }
-			// }
-			//end of image upload
-
-
-			try {
-					$stmt = $connect->prepare('INSERT INTO registrations_invent (description, brand, model, serial_no, location, department, assigned_to, status, user_id) VALUES (:description, :brand, :model, :serial_no, :location, :department, :assigned_to, :status, :user_id)');
+			$username = $_POST['username'];
+			$mobile = $_POST['mobile'];
+			$email = $_POST['email'];
+			$password = $_POST['password'];
+			$c_password = $_POST['c_password'];
+			$fullname = $_POST['fullname'];
+			if ($_POST["password"] != $_POST["c_password"]) {
+				$errMsg = 'Password mismatch!';
+			 }
+			 else {
+				try {
+					$stmt = $connect->prepare('INSERT INTO users (fullname, mobile, username, email, password) VALUES (:fullname, :mobile, :username, :email, :password)');
 					$stmt->execute(array(
-						':description' => $description,
-						':brand' => $brand,
-						':model' => $model,
-						':serial_no' => $serial_no,
-						':location' => $location,
-						':department' => $department,
-						':assigned_to' => $assigned_to,
-						':status' => $status,
-						':user_id' => $user_id
-						));				
-
-				header('Location: register.php?action=reg');
-				exit;
-			}
-			catch(PDOException $e) {
-				echo $e->getMessage();
-			}
-	}
-	if(isset($_GET['action']) && $_GET['action'] == 'reg') {
-		$errMsg = 'Item Added successfull. Thank you';
-	}	
+						':fullname' => $fullname,
+						':username' => $username,
+						':password' => md5($password),
+						':email' => $email,
+						':mobile' => $mobile,
+						));
+					header('Location: addusers.php?action=joined');
+					exit;
+				}
+				catch(PDOException $e) {
+					echo $e->getMessage();
+				}
+			    }
+		}
+	
+		if(isset($_GET['action']) && $_GET['action'] == 'joined') {
+			$errMsg = 'User was added successfully.';
+		}
 ?>
 <?php include '../include/header.php';?>
 	<!-- Header nav -->	

@@ -11,22 +11,22 @@
 		  	 <div class="row">
 		  	 	<div class="col-md-4">
 			  	  <div class="form-group">
-				    <label for="description">Description</label>
-				    <input type="text" class="form-control" id="description" placeholder=" description" name="description" required>
+				    <label for="fullname">Full Name</label>
+					<input type="text" class="form-control" id="fullname" placeholder="Full Name" name="fullname" required>
 				  </div>
 				 </div>
 
 				<div class="col-md-4">
 				  <div class="form-group">
-				    <label for="brand">Brand</label>
-				    <input type="text" class="form-control" id="brand" title="brand" placeholder="brand" name="brand" required>
+				  <label for="username">User Name</label>
+				  <input type="text" class="form-control" id="username" placeholder="User Name" name="username" required>
 				  </div>
 				 </div>
 
 				<div class="col-md-4">
 				  <div class="form-group">
-				    <label for="model">Model</label>
-				    <input type="text" class="form-control" id="model" title="model" placeholder="model" name="model">
+				  <label for="mobile">Mobile</label>
+				  <input type="text" class="form-control" pattern="^(\d{10})$" id="mobile" title="10 digit mobile number" placeholder="10 digit mobile number" name="mobile" required>
 				  </div>
 				</div>
 			</div>
@@ -34,22 +34,22 @@
 			<div class="row">
 		  	 	<div class="col-md-4">
 				  <div class="form-group">
-				    <label for="serial_no">Serial Number</label>
-				    <input type="serial_no" class="form-control" id="serial_no" placeholder="serial number" name="serial_no" required>
+				  <label for="email">Email</label>
+				  <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
 				  </div>
 				 </div>
 
 				 <div class="col-md-4">
 				  <div class="form-group">
-				    <label for="location">Location</label>
-				    <input type="text" class="form-control" id="location" placeholder="location" name="location" required>
+				  <label for="password">Password</label>
+				  <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
 				  </div>
 				 </div>
 
 				 <div class="col-md-4">
 				  <div class="form-group">
-				    <label for="department">Department</label>
-				    <input type="text" class="form-control" id="department" placeholder="department" name="department" required>
+				  <label for="c_password">Confirm Password</label>
+				  <input type="password" class="form-control" id="c_password" placeholder="Confirm Password" name="c_password" required>
 				  </div>
 				 </div>
 			</div>
