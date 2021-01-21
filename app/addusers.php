@@ -3,7 +3,7 @@
 	if(empty($_SESSION['username']))
 		header('Location: login.php');
 
-		if(isset($_POST['register'])) {
+		if(isset($_POST['register_user'])) {
 			$errMsg = '';
 	
 			// Get data from FROM
@@ -26,7 +26,7 @@
 						':email' => $email,
 						':mobile' => $mobile,
 						));
-					header('Location: addusers.php?action=joined');
+					header('Location: addusers.php?action=added');
 					exit;
 				}
 				catch(PDOException $e) {
@@ -35,7 +35,7 @@
 			    }
 		}
 	
-		if(isset($_GET['action']) && $_GET['action'] == 'joined') {
+		if(isset($_GET['action']) && $_GET['action'] == 'added') {
 			$errMsg = 'User was added successfully.';
 		}
 ?>

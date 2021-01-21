@@ -60,7 +60,7 @@
 			  </div>
 			  </div> -->
 			  </div>			
-			  <button type="submit" class="btn btn-primary" name='register_invent' value="register_invent">Submit</button>
+			  <button type="submit" class="btn btn-primary" name='register_user' value="register_user">Add</button>
 			</form>	
 			</div>			
   	</div>
