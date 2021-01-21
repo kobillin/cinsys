@@ -70,7 +70,7 @@
 			  	</div>
               <div class="col-4">
 			 		 <div class="form-group">
-					    <label for="status">Working or Not Working</label>
+					    <label for="status">Condition</label>
 					    <select type="text" class="form-control" id="status" name="status" required>
 					      <option value="Working">Working</option>
 					      <option value="Not Working">Not Working</option>
