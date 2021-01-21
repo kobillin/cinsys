@@ -11,16 +11,13 @@
 		$stmt = $connect->prepare('SELECT count(*) as register_invent FROM registrations_invent');
 		$stmt->execute();
 		$invents = $stmt->fetch(PDO::FETCH_ASSOC);
-		$stmt = $connect->prepare('SELECT count(*) as total_invent FROM registrations_invent');
-		$stmt->execute();
-		$total_rent = $stmt->fetch(PDO::FETCH_ASSOC);
 	}
 
 	$stmt = $connect->prepare('SELECT count(*) as mytotal_invent FROM registrations_invent WHERE user_id = :user_id');
 	$stmt->execute(array(
 		':user_id' => $_SESSION['id']
 		));
-	$total_auth_user_rent = $stmt->fetch(PDO::FETCH_ASSOC);
+	$mytotal_invent = $stmt->fetch(PDO::FETCH_ASSOC);
 
 	// //Others
 ?>
@@ -67,7 +64,7 @@
 							if($_SESSION['role'] == 'admin'){ 
 								echo '<div class="col-md-3">';
 								echo '<a href="../app/inventories.php"><div class="alert alert-warning" role="alert">';
-								echo '<b>Inventory: <span class="badge badge-pill badge-success">'.$invents['register_invent'].'</span></b>';
+								echo '<b>All Inventories: <span class="badge badge-pill badge-success">'.$invents['register_invent'].'</span></b>';
 								echo '</div></a>';
 								echo '</div>';
 							} 
@@ -76,7 +73,7 @@
 							if($_SESSION['role'] == 'user'){ 
 								echo '<div class="col-md-3">';
 								echo '<a href="../app/myinventories.php"><div class="alert alert-warning" role="alert">';
-								echo '<b>Inventory: <span class="badge badge-pill badge-success">'.$invents['register_invent'].'</span></b>';
+								echo '<b>Inventories: <span class="badge badge-pill badge-success">'.$mytotal_invent['register_invent'].'</span></b>';
 								echo '</div></a>';
 								echo '</div>';
 							} 
