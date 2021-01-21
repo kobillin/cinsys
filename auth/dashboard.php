@@ -17,7 +17,7 @@
 	$stmt->execute(array(
 		':user_id' => $_SESSION['id']
 		));
-	$mytotal_invent = $stmt->fetch(PDO::FETCH_ASSOC);
+	$myinvents= $stmt->fetch(PDO::FETCH_ASSOC);
 
 	// //Others
 ?>
@@ -73,7 +73,7 @@
 							if($_SESSION['role'] == 'user'){ 
 								echo '<div class="col-md-3">';
 								echo '<a href="../app/myinventories.php"><div class="alert alert-warning" role="alert">';
-								echo '<b>Inventories: <span class="badge badge-pill badge-success">'.$mytotal_invent['register_invent'].'</span></b>';
+								echo '<b>Inventories: <span class="badge badge-pill badge-success">'.$myinvents['mytotal_invent'].'</span></b>';
 								echo '</div></a>';
 								echo '</div>';
 							} 
