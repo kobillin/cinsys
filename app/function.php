@@ -159,4 +159,18 @@ if (isset($_GET['deleteb'])) {
 
     }
 }
+function invent_exists($serial_no, $conn)
+{
+	$result = mysqli_query($conn,"SELECT serial_no FROM registrations_invent WHERE serial_no ='$serial_no'");
+
+	if (mysqli_num_rows($result)== 1) 
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
  ?>

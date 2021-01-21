@@ -1,5 +1,6 @@
 <?php
 	require '../config/config.php';
+	require 'function.php';
 	if(empty($_SESSION['username']))
 		header('Location: login.php');
 
@@ -35,8 +36,10 @@
 			//     }
 			// }
 			//end of image upload
-
-
+			if (invent_exists($serial_no, $conn)) {
+				$errMsg = 'Serial Number is already in use';
+			 }
+			 else {
 			try {
 					$stmt = $connect->prepare('INSERT INTO registrations_invent (description, brand, model, serial_no, location, department, assigned_to, status, user_id) VALUES (:description, :brand, :model, :serial_no, :location, :department, :assigned_to, :status, :user_id)');
 					$stmt->execute(array(
@@ -57,6 +60,7 @@
 			catch(PDOException $e) {
 				echo $e->getMessage();
 			}
+		    }
 	}
 	if(isset($_GET['action']) && $_GET['action'] == 'reg') {
 		$errMsg = 'Item Added successfull. Thank you';
