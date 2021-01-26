@@ -47,10 +47,10 @@
                 <div class="row">
                     <div class="col-sm-6">
       <h2>Manage <b>Inventory</b></h2>
-      <form class="search_form" action="">
+      <!-- <form class="search_form" action="">
 					<input type="text" name="search_invent" placeholder="Search Inventory">
 					<button class="btn btn-info" type="submit" name="search_invent_btn">Search</button>
-				</form>
+				</form> -->
       <!-- <a class="btn btn-success" href="report.php">Report</a> -->
      </div>
      <div class="col-sm-6">
