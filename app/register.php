@@ -102,7 +102,7 @@
 
 	<div class="tab-content">
 	<!-- inventories -->
-	  <div class="tab-pane active" id="home" role="tabpanel"><br>
+	  <div class="tab-pane active embed-responsive" id="home" role="tabpanel"><br>
 	  		<?php include 'partials/invent.php';?>
 	  </div>
 	</div>	
