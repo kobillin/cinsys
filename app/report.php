@@ -1,6 +1,4 @@
 <?php 
-require '../config/config.php';
-require 'function.php';
 if(empty($_SESSION['username']))
   header('Location: login.php'); 
 ?>
