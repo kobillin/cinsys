@@ -42,7 +42,7 @@
  <br>
  <!-- <h3 class="text-center text-success" id="message"><?php echo  $success; ?></h3> -->
     <div style="width:auto; overflow;" class="container">
-        <div class="table-wrapper">
+        <div style="margin-top:0px;" class="table-wrapper">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
@@ -53,7 +53,7 @@
      </div>
                 </div>
    </div>
-
+   <div style=" max-height:400px; overflow:scroll; ">
             <table class="table table-striped table-hover table-responsive">
                 <thead class="thead-dark">
                     <tr>
@@ -80,6 +80,7 @@
                 ?>
                 </tbody>
             </table>
+</div>      
    <!-- <div class="clearfix">
                 <div class="hint-text">Showing <b>5</b> out of <b>100</b> entries</div>
                 <ul class="pagination">
