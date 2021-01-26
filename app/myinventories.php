@@ -35,14 +35,14 @@
 	<!-- end header nav -->
 <?php include '../include/side-nav.php';?>
 <section class="wrapper" style="margin-left:16%;margin-top: -11%;">
-	<div class="container">
+	<div style="margin-top:0px;" class="container">
 		<div class="row">
 			<div class="col-12">
 				<br>
  <br>
  <!-- <h3 class="text-center text-success" id="message"><?php echo  $success; ?></h3> -->
     <div style="width:auto; overflow;" class="container">
-        <div style="margin-top:0px;" class="table-wrapper">
+        <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">

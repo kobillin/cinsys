@@ -41,8 +41,8 @@
 				<br>
  <br>
  <!-- <h3 class="text-center text-success" id="message"><?php echo  $success; ?></h3> -->
-    <div class="container">
-        <div style="margin-top:0px;" class="table-wrapper">
+    <div style="margin-top:0px;" class="container">
+        <div  class="table-wrapper">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
