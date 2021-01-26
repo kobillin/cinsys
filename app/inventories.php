@@ -54,8 +54,8 @@
                 </div>
    </div>
 
-            <table class="table table-striped table-hover">
-                <thead>
+            <table class="table table-striped table-hover table-responsive">
+                <thead class="thead-dark">
                     <tr>
                       <th>Id</th>
                       <th>Description</th>

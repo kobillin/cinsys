@@ -1,6 +1,8 @@
-<?php if(!isset($_SESSION)){
-    session_start();
-    }  
+<?php 
+require '../config/config.php';
+require 'function.php';
+if(empty($_SESSION['username']))
+  header('Location: login.php'); 
 ?>
 <?php 
 function fetch_data()
