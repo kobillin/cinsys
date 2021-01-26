@@ -53,7 +53,7 @@
      </div>
                 </div>
    </div>
-<div id="tbl">
+<div style=" max-height:400px; overflow:scroll; ">
             <table class="table table-striped table-hover table-responsive">
                 <thead class="thead-dark">
                     <tr>
