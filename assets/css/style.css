@@ -148,7 +148,9 @@
     padding-left: 15px;
   }
   @media (min-width: 360px) {
-
+    section{
+      padding-left: 0px;
+    }
     .main{
       position: absolute;
       width: calc(100% - 40px); 
