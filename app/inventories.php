@@ -26,6 +26,9 @@
               <a class="nav-link" href="login.php"><?php echo $_SESSION['fullname']; ?> <?php if($_SESSION['role'] == 'admin'){ echo "(Admin)"; } ?></a>
             </li>
             <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="search.php">Search</a>
+            </li>
+            <li class="nav-item">
               <a href="../auth/logout.php" class="nav-link">Logout</a>
             </li>
           </ul>
