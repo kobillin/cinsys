@@ -1,5 +1,5 @@
 <!-- <div class="row"> -->			
-<div class="col-md-11 col-xs-12 col-sm-12">
+<div class="col-md-11 col-xs-12 col-sm-12 register">
   	<div class="alert alert-info" role="alert">
   		<?php
 			if(isset($errMsg)){
