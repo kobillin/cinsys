@@ -53,7 +53,7 @@
      </div>
                 </div>
    </div>
-
+<div id="tbl">
             <table class="table table-striped table-hover table-responsive">
                 <thead class="thead-dark">
                     <tr>
@@ -80,6 +80,7 @@
                 ?>
                 </tbody>
             </table>
+  </div>          
    <!-- <div class="clearfix">
                 <div class="hint-text">Showing <b>5</b> out of <b>100</b> entries</div>
                 <ul class="pagination">
