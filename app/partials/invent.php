@@ -68,7 +68,6 @@
 			    	<input type="assigned_to" class="form-control" id="assigned_to" placeholder="assigned to" name="assigned_to" required>
 			  		</div>
 			  	</div>
-              <div class="col-4">
 			 		 <div class="form-group">
 					    <label for="status">Condition</label>
 					    <select type="text" class="form-control" id="status" name="status" required>
@@ -76,14 +75,7 @@
 					      <option value="Not Working">Not Working</option>
 					    </select>
 					  </div>
-			 	</div>
 			</div>
-			 <!-- <div class="col-md-4">
-			  <div class="form-group">
-			    <label for="description">Image</label>
-			    <input type="file" name="image" id="image">
-			  </div>
-			  </div> -->
 			  </div>			
 			  <button type="submit" class="btn btn-primary" name='register_invent' value="register_invent">Submit</button>
 			</form>	
