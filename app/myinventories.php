@@ -54,8 +54,8 @@
                 </div>
    </div>
 
-            <table class="table table-striped table-hover">
-                <thead>
+            <table class="table table-striped table-hover table-responsive">
+                <thead class="thead-dark">
                     <tr>
                       <th>Id</th>
                       <th>Description</th>
@@ -80,7 +80,7 @@
                 ?>
                 </tbody>
             </table>
-   <div class="clearfix">
+   <!-- <div class="clearfix">
                 <div class="hint-text">Showing <b>5</b> out of <b>100</b> entries</div>
                 <ul class="pagination">
                     <li class="page-item disabled"><a href="#" class="page-link">Previous</a></li>
@@ -91,7 +91,7 @@
                     <li class="page-item"><a href="#" class="page-link">5</a></li>
                     <li class="page-item"><a href="#" class="page-link">Next</a></li>
                 </ul>
-            </div>
+    </div> -->
         </div>
     </div>
  
@@ -109,8 +109,8 @@
       <p class="text-warning"><small>This action cannot be undone.</small></p>
      </div>
      <div class="modal-footer">
-      <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-      <a href='delete_user.php?id=$id' style='float:right;'><button class='btn btn-danger'>Delete</button>
+      <!-- <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+      <a href='delete_user.php?id=$id' style='float:right;'><button class='btn btn-danger'>Delete</button> -->
      </div>
     </form>
    </div>
