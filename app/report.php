@@ -4,7 +4,7 @@ if(empty($_SESSION['username']))
 ?>
 <?php 
 function fetch_data()
-{
+  {
     $output ='';
     $conn = mysqli_connect('remotemysql.com', 'HHh5S5qdnc', 'hoUUU48fLk', 'HHh5S5qdnc')
     // $conn = mysqli_connect("localhost", "root", "","cinsys");
@@ -26,13 +26,13 @@ function fetch_data()
                           ';
     }
     return $output;
-}
+  }
 if(isset($_POST["Print"]))  
  {  
       require_once('TCPDF/tcpdf.php');  
       $obj_pdf = new TCPDF('P', PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);  
       $obj_pdf->SetCreator(PDF_CREATOR);  
-      $obj_pdf->SetTitle("List of appointments");  
+      $obj_pdf->SetTitle("List of Inventories");  
       $obj_pdf->SetHeaderData('', '', PDF_HEADER_TITLE, PDF_HEADER_STRING);  
       $obj_pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));  
       $obj_pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));  
