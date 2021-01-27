@@ -202,22 +202,22 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Your Name All Rights Reserved</span>
+            <span class="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Abraham Kipsang All Rights Reserved</span>
           </div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="https://twitter.com/kobillin">
+                <a href="https://twitter.com/kobillin"target="_blank" rel="noopener noreferrer">
                   <i class="fa fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.facebook.com/abraham.kipsang.9">
+                <a href="https://www.facebook.com/abraham.kipsang.9" target="_blank" rel="noopener noreferrer">
                   <i class="fa fa-facebook"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/abraham-kipsang-9404b4a2/">
+                <a href="https://www.linkedin.com/in/abraham-kipsang-9404b4a2"target="_blank" rel="noopener noreferrer">
                   <i class="fa fa-linkedin"></i>
                 </a>
               </li>
