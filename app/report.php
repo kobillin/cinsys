@@ -6,7 +6,7 @@
 function fetch_data()
   {
     $output ='';
-    $conn = mysqli_connect('remotemysql.com', 'HHh5S5qdnc', 'hoUUU48fLk', 'HHh5S5qdnc')
+    $conn = mysqli_connect('remotemysql.com', 'HHh5S5qdnc','hoUUU48fLk', 'HHh5S5qdnc')
     // $conn = mysqli_connect("localhost", "root", "","cinsys");
     $sql = "SELECT * FROM registrations_invent ORDER BY id";
     $result =mysqli_query($conn, $sql)or die( mysqli_error($conn));
