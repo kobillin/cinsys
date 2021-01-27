@@ -201,7 +201,7 @@
     <footer style="background-color: #ccc;">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
             <span class="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Abraham Kipsang All Rights Reserved</span>
           </div>
           <div class="col-md-4">
