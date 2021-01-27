@@ -1,32 +1,10 @@
 <?php 
-if(empty($_SESSION['username']))
+  require '../config/config.php';
+  require 'function.php';
+  if(empty($_SESSION['username']))
   header('Location: login.php'); 
 ?>
 <?php 
-function fetch_data()
-  {
-    $output ='';
-    $conn = mysqli_connect('remotemysql.com', 'HHh5S5qdnc', 'hoUUU48fLk', 'HHh5S5qdnc')
-    // $conn = mysqli_connect("localhost", "root", "","cinsys");
-    $sql = "SELECT * FROM registrations_invent ORDER BY id";
-    $result =mysqli_query($conn, $sql)or die( mysqli_error($conn));
-    while ($row = mysqli_fetch_array($result)) 
-    {
-        $output.= '<tr>  
-                           
-                          <td>'.$row["description"].'</td>    
-                          <td>'.$row["brand"].'</td>
-                          <td>'.$row["model"].'</td>  
-                          <td>'.$row["serial_no"].'</td>   
-                          <td>'.$row["location"].'</td>
-                          <td>'.$row["department"].'</td>
-                          <td>'.$row["assigned_to"].'</td>
-                          <td>'.$row["status"].'</td>
-                     </tr>  
-                          ';
-    }
-    return $output;
-  }
 if(isset($_POST["Print"]))  
  {  
       require_once('TCPDF/tcpdf.php');  
