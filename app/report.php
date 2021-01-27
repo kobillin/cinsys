@@ -1,6 +1,6 @@
 <?php 
-if(empty($_SESSION['username']))
-  header('Location: login.php'); 
+// if(empty($_SESSION['username']))
+//   header('Location: login.php'); 
 ?>
 <?php 
 function fetch_data()
