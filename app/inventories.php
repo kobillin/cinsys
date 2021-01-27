@@ -96,7 +96,6 @@
            $obj_pdf->Output('Inventory report.pdf', 'I');  
       }  
       ?>  
-      ?>
      </div>
      <div class="col-sm-6">
      </div>
