@@ -51,7 +51,7 @@
 					<input type="text" name="search_invent" placeholder="Search Inventory">
 					<button class="btn btn-info" type="submit" name="search_invent_btn">Search</button>
 				</form> -->
-      <!-- <a class="btn btn-success" href="report.php">Report</a> -->
+      <a class="btn btn-success" href="report.php">Report</a>
      </div>
      <div class="col-sm-6">
      </div>

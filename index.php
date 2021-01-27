@@ -151,7 +151,7 @@
             <img style="height: 510px; width: auto;" src="src/2.jpg" class="img-responsive">
             <div class="carousel-caption">
               <h3>Inventory</h3>
-              <p> County Laptops</p>
+              <p>Laptops</p>
             </div>
           </div>
           <div class="carousel-item">
@@ -202,22 +202,22 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <span class="copyright">Copyright &copy; Abraham Kipsang 2021</span>
+            <span class="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Your Name All Rights Reserved</span>
           </div>
           <div class="col-md-4">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://twitter.com/kobillin">
                   <i class="fa fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.facebook.com/abraham.kipsang.9">
                   <i class="fa fa-facebook"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.linkedin.com/in/abraham-kipsang-9404b4a2/">
                   <i class="fa fa-linkedin"></i>
                 </a>
               </li>
