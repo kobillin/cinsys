@@ -71,6 +71,7 @@
                       <th>Assigned to</th>
                       <th>Condition</th>
                       <th>Date Added</th>
+                      <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
