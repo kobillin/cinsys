@@ -37,12 +37,13 @@ if(empty($_SESSION['username']))
 	    <a class="nav-link" data-toggle="tab" href="inventories" role="tab">Inventory</a>
 	  </li> -->
 	</ul>
-
 	<div class="tab-content">
 	<!-- inventories -->
-	<div class="row">
-		<div class="col-sm-3"></div>
-		<div class="col-sm-6">
+	  <div class="tab-pane active embed-responsive" id="home" role="tabpanel"><br>
+	  	<?php include 'partials/editinvent.php';?>
+	  </div>
+	</div>	
+</section>
 			<?php 
                if (isset($_GET['id'])) {
                	$get_id =$_GET['id'];
@@ -64,12 +65,7 @@ if(empty($_SESSION['username']))
 				$created_at = $row['created_at'];
                }
 			 ?>
-			 <div class="tab-content">
-				<!-- inventories -->
-	  			<div class="tab-pane active embed-responsive" id="home" role="tabpanel"><br>
-	  		<?php include 'partials/editinvent.php';?>
-	  		</div>
-			</div>
+			 
 			 <?php 
 
 
@@ -79,12 +75,6 @@ if(empty($_SESSION['username']))
 
               } 
 			  ?>
-		</div>
-
-		<div class="col-sm-3"></div>
-	</div>
-	</div>	
-</section>
 <?php include '../include/footer.php';?>
 <body>
 	
