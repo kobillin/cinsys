@@ -48,18 +48,28 @@ if(empty($_SESSION['username']))
                	$get_id =$_GET['id'];
 
 
-               	$get_post ="select *from registrations_invent where id='$get_id'";
-               	$run_post =mysqli_query($con, $get_post);
-               	$row = mysqli_fetch_array($run_post);
+               	$get_inv ="select *from registrations_invent where id='$get_id'";
+               	$run_inv =mysqli_query($con, $get_inv);
+               	$row = mysqli_fetch_array($run_inv);
 
-               	$post_con = $row['decsription'];
+            
+				$description = $row['description'];
+				$brand = $row['brand'];
+				$model = $row['model'];
+				$serial_no = $row['serial_no'];
+				$location = $row['location'];
+				$department = $row['department'];
+				$assigned_to = $row['assigned_to'];
+				$status = $row['status'];
+				$created_at = $row['created_at'];
                }
 			 ?>
-			 <form action="" method="post" id="f">
-			 	<center><h2>Edit Inventory here:</h2></center><br>
-			 	<textarea class="form-control" cols="83" rows="4" name="content"><?php echo $post_con; ?></textarea><br>
-			 	<input type="submit" name="update" value="Update Inventory" class="btn btn-info"/>
-			 </form>
+			 <div class="tab-content">
+				<!-- inventories -->
+	  			<div class="tab-pane active embed-responsive" id="home" role="tabpanel"><br>
+	  		<?php include 'partials/editinvent.php';?>
+	  		</div>
+			</div>
 			 <?php 
 
 
