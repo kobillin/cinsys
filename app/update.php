@@ -44,37 +44,6 @@ if(empty($_SESSION['username']))
 	  </div>
 	</div>	
 </section>
-			<?php 
-               if (isset($_GET['id'])) {
-               	$get_id =$_GET['id'];
-
-
-               	$get_inv ="select *from registrations_invent where id='$get_id'";
-               	$run_inv =mysqli_query($con, $get_inv);
-               	$row = mysqli_fetch_array($run_inv);
-
-            
-				$description = $row['description'];
-				$brand = $row['brand'];
-				$model = $row['model'];
-				$serial_no = $row['serial_no'];
-				$location = $row['location'];
-				$department = $row['department'];
-				$assigned_to = $row['assigned_to'];
-				$status = $row['status'];
-				$created_at = $row['created_at'];
-               }
-			 ?>
-			 
-			 <?php 
-
-
-
-             if (isset($_POST['update'])) {
-
-
-              } 
-			  ?>
 <?php include '../include/footer.php';?>
 <body>
 	

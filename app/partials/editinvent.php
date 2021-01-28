@@ -1,20 +1,23 @@
+<?php
+require '../config/config.php';
+?>
 <?php 
-               if (isset($_GET['id'])) {
-               	$get_id =$_GET['id'];
-               	$get_inv ="select *from registrations_invent where id='$get_id'";
-               	$run_inv =mysqli_query($con, $get_inv);
-               	$row = mysqli_fetch_array($run_inv);
+	if (isset($_GET['id'])) {
+        $get_id =$_GET['id'];
+        $get_inv ="select *from registrations_invent where id='$get_id'";
+        $run_inv =mysqli_query($con, $get_inv);
+        $row = mysqli_fetch_array($run_inv);
 
-               	$errMsg = '';
+        $errMsg = '';
 			// Get data from FROM
-			$description = $_POST['description'];
-			$brand = $_POST['brand'];
-			$model = $_POST['model'];
-			$serial_no = $_POST['serial_no'];
-			$location = $_POST['location'];
-			$department = $_POST['department'];
-			$assigned_to = $_POST['assigned_to'];
-			$status = $_POST['status'];
+		$description = $_POST['description'];
+		$brand = $_POST['brand'];
+		$model = $_POST['model'];
+		$serial_no = $_POST['serial_no'];
+		$location = $_POST['location'];
+		$department = $_POST['department'];
+		$assigned_to = $_POST['assigned_to'];
+		$status = $_POST['status'];
                }
 			 ?>
 <!-- <div class="row"> -->			
