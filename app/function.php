@@ -115,7 +115,7 @@ function showmyinvent(){
 		echo "<td>{$assigned_to}</td>";
 		echo "<td>{$status}</td>";
 		echo "<td>{$created_at}</td>";
-		echo "<td> <a href='#?updateinv={$id}'class='btn btn-primary' >Edit</a> </td>";
+		echo "<td> <a href='#?updateinv={$id}'class='btn btn-primary' ><i class="fas fa-trash-alt"></i></a> </td>";
 		// echo "<td> <a href='bookings.php?deleteb={$id}'class='btn btn-danger' >Delete</a> </td>";
 		echo "</tr>";
 	}
