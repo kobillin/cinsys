@@ -154,7 +154,7 @@ function showinvent(){
 		echo "<td>{$status}</td>";
 		echo "<td>{$created_at}</td>";
 		echo "<td> <a href='inventories.php?deleteinv={$id}'class='btn btn-danger' >Delete</a> </td>";
-		echo "<td> <a href='#?updateinv={$id}'class='btn btn-primary' >Edit</a> </td>";
+		echo "<td> <a href='update.php?updateinv={$id}'class='btn btn-primary' >Edit</a> </td>";
 		// echo "<td> <a href='users.php?delete={$id}'class='btn btn-danger' >Delete</a> </td>";
 		echo "</tr>";
 	}
