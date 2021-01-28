@@ -62,7 +62,7 @@ if (isset($_GET['deleteinv'])) {
 
     if ($run) {
     	echo "<script>alert('Inventory has been deleted')</script>";
-    	echo "<script>window.open('../app/users.php', '_self')</script>";
+    	echo "<script>window.open('../app/inventories.php', '_self')</script>";
 
     }
 }
