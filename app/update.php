@@ -44,36 +44,29 @@ if(empty($_SESSION['username']))
 		<div class="col-sm-3"></div>
 		<div class="col-sm-6">
 			<?php 
-               if (isset($_GET['post_id'])) {
-               	$get_id =$_GET['post_id'];
+               if (isset($_GET['id'])) {
+               	$get_id =$_GET['id'];
 
 
                	$get_post ="select *from registrations_invent where id='$get_id'";
                	$run_post =mysqli_query($con, $get_post);
                	$row = mysqli_fetch_array($run_post);
 
-               	$post_con = $row['post_content'];
+               	$post_con = $row['decsription'];
                }
 			 ?>
 			 <form action="" method="post" id="f">
 			 	<center><h2>Edit Inventory here:</h2></center><br>
 			 	<textarea class="form-control" cols="83" rows="4" name="content"><?php echo $post_con; ?></textarea><br>
-			 	<input type="submit" name="update" value="Update Post" class="btn btn-info"/>
+			 	<input type="submit" name="update" value="Update Inventory" class="btn btn-info"/>
 			 </form>
 			 <?php 
 
 
 
              if (isset($_POST['update'])) {
-              	$content = $_POST['content'];
 
-                $update_post ="update posts set post_content='$content' where post_id='$get_id'";
-                $run_update = mysqli_query($con, $update_post);
 
-                if ($run_update) {
-                	echo "<script>alert('A post has been updated')</script>";
-    				echo "<script>window.open('home.php', '_self')</script>";
-                }
               } 
 			  ?>
 		</div>
