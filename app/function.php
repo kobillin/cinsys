@@ -67,6 +67,21 @@ if (isset($_GET['deleteinv'])) {
     }
 }
 
+//Update inventory
+if (isset($_GET['updateinv'])) {
+	$id = $_GET['updateinv'];
+
+	$query ="UPDATE FROM registrations_invent WHERE id='$id'";
+
+    $run = mysqli_query($conn, $query);
+
+    if ($run) {
+    	echo "<script>alert('Inventory has been Updated')</script>";
+    	echo "<script>window.open('../app/inventories.php', '_self')</script>";
+
+    }
+}
+
 
 //MY inventory
 function showmyinvent(){
@@ -100,6 +115,7 @@ function showmyinvent(){
 		echo "<td>{$assigned_to}</td>";
 		echo "<td>{$status}</td>";
 		echo "<td>{$created_at}</td>";
+		echo "<td> <a href='#?updateinv={$id}'class='btn btn-primary' >Edit</a> </td>";
 		// echo "<td> <a href='bookings.php?deleteb={$id}'class='btn btn-danger' >Delete</a> </td>";
 		echo "</tr>";
 	}
@@ -138,26 +154,13 @@ function showinvent(){
 		echo "<td>{$status}</td>";
 		echo "<td>{$created_at}</td>";
 		echo "<td> <a href='inventories.php?deleteinv={$id}'class='btn btn-danger' >Delete</a> </td>";
+		echo "<td> <a href='#?updateinv={$id}'class='btn btn-primary' >Edit</a> </td>";
 		// echo "<td> <a href='users.php?delete={$id}'class='btn btn-danger' >Delete</a> </td>";
 		echo "</tr>";
 	}
 }
 
-//Delete 
-
-if (isset($_GET['deleteb'])) {
-	$id = $_GET['deleteb'];
-
-	$query ="DELETE FROM bookings WHERE id='$id'";
-
-    $run = mysqli_query($conn, $query);
-
-    if ($run) {
-    	echo "<script>alert('Booking has been deleted')</script>";
-    	echo "<script>window.open('../app/bookings.php', '_self')</script>";
-
-    }
-}
+//check if device exists
 function invent_exists($serial_no, $conn)
 {
 	$result = mysqli_query($conn,"SELECT serial_no FROM registrations_invent WHERE serial_no ='$serial_no'");
