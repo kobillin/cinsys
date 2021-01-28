@@ -52,23 +52,21 @@ if (isset($_GET['delete'])) {
 
     }
 }
+//delete inventory
+if (isset($_GET['deleteinv'])) {
+	$id = $_GET['deleteinv'];
 
-
-//Delete 
-
-if (isset($_GET['deleteb'])) {
-	$id = $_GET['deleteb'];
-
-	$query ="DELETE FROM bookings WHERE id='$id'";
+	$query ="DELETE FROM registrations_invent WHERE id='$id'";
 
     $run = mysqli_query($conn, $query);
 
     if ($run) {
-    	echo "<script>alert('Booking has been deleted')</script>";
-    	echo "<script>window.open('../app/bookings.php', '_self')</script>";
+    	echo "<script>alert('Inventory has been deleted')</script>";
+    	echo "<script>window.open('../app/users.php', '_self')</script>";
 
     }
 }
+
 
 //MY inventory
 function showmyinvent(){
@@ -139,7 +137,8 @@ function showinvent(){
 		echo "<td>{$assigned_to}</td>";
 		echo "<td>{$status}</td>";
 		echo "<td>{$created_at}</td>";
-		// echo "<td> <a href='bookings.php?deleteb={$id}'class='btn btn-danger' >Delete</a> </td>";
+		echo "<td> <a href='inventories.php?deleteinv={$id}'class='btn btn-danger' >Delete</a> </td>";
+		// echo "<td> <a href='users.php?delete={$id}'class='btn btn-danger' >Delete</a> </td>";
 		echo "</tr>";
 	}
 }
