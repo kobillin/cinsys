@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	// Define database
+	// Define database local
 	// define('dbhost', 'localhost');
 	// define('dbuser', 'root');
 	// define('dbpass', '');

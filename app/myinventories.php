@@ -5,7 +5,6 @@
 		header('Location: login.php');	
 ?>
 <?php 
-// $conn = mysqli_connect('remotemysql.com', 'HHh5S5qdnc', 'hoUUU48fLk', 'HHh5S5qdnc')
   // $mysqli =new mysqli('localhost', 'root','', 'cinsys') or die(mysqli_error(mysqli));
   $mysqli =new mysqli('remotemysql.com', 'HHh5S5qdnc','hoUUU48fLk', 'HHh5S5qdnc') or die(mysqli_error(mysqli));
 	$result =$mysqli->query("SELECT * from users") or die($mysqli->error);
@@ -81,18 +80,6 @@
                 </tbody>
             </table>
 </div>      
-   <!-- <div class="clearfix">
-                <div class="hint-text">Showing <b>5</b> out of <b>100</b> entries</div>
-                <ul class="pagination">
-                    <li class="page-item disabled"><a href="#" class="page-link">Previous</a></li>
-                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">4</a></li>
-                    <li class="page-item"><a href="#" class="page-link">5</a></li>
-                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
-                </ul>
-    </div> -->
         </div>
     </div>
  

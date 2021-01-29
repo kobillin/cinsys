@@ -1,14 +1,6 @@
-# home-rental-webapp
+installation
 
-###### This Web application helps user to register individaul home or apartment to assist you in finding the perfect rental home or property. Also you can find your next rental from search view in your targeted area.
-
-## Built with Core PHP, PHP PDO, Bootstrap4, Jquery, MYSQL.
-
-
-installation of house rental and property listing project
-
-
-Softwares need 
+Softwares needed
 
 1. xamp or wamp 
 
@@ -16,17 +8,17 @@ Softwares need
 
 3. start xamp/wamp server.
 
-4. open browser and type - localhost/home-rental
+4. open browser and type - localhost/cinsys
 
 
 show error--
 
-SQLSTATE[HY000] [1049] Unknown database 'newrent'
+SQLSTATE[HY000] [1049] Unknown database cinsys
 
 
 5. goto localhost/phpmyadmin .
 
-and create database newrent
+and create database cinsys
 
 and import newrent.sql file
 
@@ -36,12 +28,11 @@ next see how to work it
 
 admin login
 
-username - admin
+Username - Kipsang
 
 password- admin
 
-
-Register as new user 
+Other users can be added
 
 Thank you.
 

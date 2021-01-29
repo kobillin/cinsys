@@ -53,12 +53,6 @@
 				  </div>
 				 </div>
 			</div>
-			 <!-- <div class="col-md-4">
-			  <div class="form-group">
-			    <label for="description">Image</label>
-			    <input type="file" name="image" id="image">
-			  </div>
-			  </div> -->
 			  </div>			
 			  <button type="submit" class="btn btn-primary" name='register_user' value="register_user">Add</button>
 			</form>	

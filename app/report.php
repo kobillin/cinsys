@@ -1,4 +1,5 @@
 <?php 
+require '../config/config.php';
 if(empty($_SESSION['username']))
   header('Location: login.php'); 
 ?>

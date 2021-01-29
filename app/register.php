@@ -17,25 +17,6 @@
 			$status = $_POST['status'];
 			//$open_for_sharing = $_POST['open_for_sharing'];
 			$user_id = $_SESSION['id'];
-			//$image = $_POST['image']?$_POST['image']:NULL;
-			//$other = $_POST['other'];			
-			//upload an images
-			// $target_file = "";
-			// if (isset($_FILES["image"]["name"])) {
-			// 	$target_file = "uploads/".basename($_FILES["image"]["name"]);
-			// 	$uploadOk = 1;
-			// 	$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-			// 	// Check if image file is a actual image or fake image
-			//     $check = getimagesize($_FILES["image"]["tmp_name"]);			
-			//     if($check !== false) {
-			//     	move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/" . $_FILES["image"]["name"]);
-			//         $uploadOk = 1;
-			//     } else {
-			//         echo "File is not an image.";
-			//         $uploadOk = 0;
-			//     }
-			// }
-			//end of image upload
 			if (invent_exists($serial_no, $conn)) {
 				$errMsg = 'Serial Number is already in use';
 			 }
